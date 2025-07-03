@@ -2,14 +2,14 @@
 
 這是一個即時監控地震和海嘯資訊的 React 應用程式，使用中央氣象局開放資料 API。
 
-## 🚀 功能特色
+##  功能特色
 
-- 📊 即時地震資訊顯示
-- 🌊 海嘯警報監控
-- 🔄 每 30 秒自動更新
-- 📱 響應式設計，適配各種裝置
+-  即時地震資訊顯示
+-  海嘯警報監控
+-  每 30 秒自動更新
+-  響應式設計，適配各種裝置
 
-## 🔧 安裝與設定
+##  安裝與設定
 
 ### 1. 複製專案
 ```bash
@@ -38,14 +38,14 @@ REACT_APP_CWA_API_KEY=your_actual_api_key_here
 npm start
 ```
 
-## 🔑 取得 API KEY
+##  取得 API KEY
 
 1. 前往 [中央氣象局開放資料平臺](https://opendata.cwa.gov.tw/)
 2. 註冊帳號並登入
 3. 申請 API 授權碼
 4. 將授權碼加入 `.env` 檔案
 
-## 🚀 部署到 GitHub Pages
+##  部署到 GitHub Pages
 
 ### 使用 GitHub Actions (推薦)
 
@@ -73,9 +73,9 @@ npm start
 npm run deploy
 ```
 
-## 🔒 安全注意事項
+##  安全注意事項
 
-⚠️ **重要提醒**：
+ **重要提醒**：
 - **永遠不要將 API KEY 直接寫在程式碼中**
 - `.env` 檔案已加入 `.gitignore`，不會被推送到 GitHub
 - 使用 GitHub Secrets 來安全地管理敏感資訊
@@ -97,23 +97,23 @@ earthquake-tsunami-tracker/
 └── README.md
 ```
 
-## 🛠️ 可用腳本
+## 可用腳本
 
 - `npm start` - 啟動開發伺服器
 - `npm test` - 執行測試
 - `npm run build` - 建置生產版本
 - `npm run deploy` - 部署到 GitHub Pages
 
-## 📝 使用的 API
+##  使用的 API
 
 - [中央氣象局地震報告-顯著有感地震報告](https://opendata.cwa.gov.tw/dataset/earthquake/E-A0016-001)
 - [中央氣象局海嘯報告](https://opendata.cwa.gov.tw/dataset/tsunami/E-A0014-001)
 
-## 🐛 問題回報
+##  問題回報
 
 如果您發現任何問題，請在 [GitHub Issues](https://github.com/jeff-Morax/earthquake-tsunami-tracker/issues) 中回報。
 
-## 📄 授權
+##  授權
 
 本專案採用 MIT 授權條款。
 
