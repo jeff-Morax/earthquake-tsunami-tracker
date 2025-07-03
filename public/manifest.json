@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "地震海嘯追蹤器",
+  "name": "地震海嘯追蹤器",
   "icons": [
     {
       "src": "favicon.ico",
