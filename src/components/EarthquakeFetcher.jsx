@@ -8,7 +8,7 @@ function EarthquakeFetcher() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [lastUpdate, setLastUpdate] = useState(null)
-  const API_KEY = 'CWA-504B3E5D-FDD1-4AC0-96A2-11A5DCA902AF'
+  const API_KEY = process.env.REACT_APP_CWA_API_KEY
 
   const fetchData = useCallback(async () => {
     try {

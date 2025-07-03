@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+# 地震海嘯追蹤器 (Earthquake Tsunami Tracker)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+這是一個即時監控地震和海嘯資訊的 React 應用程式，使用中央氣象局開放資料 API。
 
-## Available Scripts
+## 🚀 功能特色
 
-In the project directory, you can run:
+- 📊 即時地震資訊顯示
+- 🌊 海嘯警報監控
+- 🔄 每 30 秒自動更新
+- 📱 響應式設計，適配各種裝置
 
-### `npm start`
+## 🔧 安裝與設定
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. 複製專案
+```bash
+git clone https://github.com/jeff-Morax/earthquake-tsunami-tracker.git
+cd earthquake-tsunami-tracker
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. 安裝依賴項
+```bash
+npm install
+```
 
-### `npm test`
+### 3. 設定環境變數
+複製 `.env.example` 檔案並重新命名為 `.env`：
+```bash
+cp .env.example .env
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+編輯 `.env` 檔案，加入您的中央氣象局 API KEY：
+```
+REACT_APP_CWA_API_KEY=your_actual_api_key_here
+```
 
-### `npm run build`
+### 4. 啟動開發伺服器
+```bash
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🔑 取得 API KEY
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. 前往 [中央氣象局開放資料平臺](https://opendata.cwa.gov.tw/)
+2. 註冊帳號並登入
+3. 申請 API 授權碼
+4. 將授權碼加入 `.env` 檔案
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 部署到 GitHub Pages
 
-### `npm run eject`
+### 使用 GitHub Actions (推薦)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **設定 GitHub Secrets**：
+   - 前往您的 GitHub 儲存庫設定頁面
+   - 點擊 `Secrets and variables` → `Actions`
+   - 點擊 `New repository secret`
+   - 名稱：`REACT_APP_CWA_API_KEY`
+   - 值：您的 CWA API KEY
+   - 點擊 `Add secret`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **啟用 GitHub Pages**：
+   - 前往儲存庫 `Settings` → `Pages`
+   - Source 選擇 `GitHub Actions`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **推送代碼**：
+   ```bash
+   git add .
+   git commit -m "Add GitHub Actions deployment"
+   git push
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 手動部署
+```bash
+npm run deploy
+```
 
-## Learn More
+## 🔒 安全注意事項
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+⚠️ **重要提醒**：
+- **永遠不要將 API KEY 直接寫在程式碼中**
+- `.env` 檔案已加入 `.gitignore`，不會被推送到 GitHub
+- 使用 GitHub Secrets 來安全地管理敏感資訊
+- 定期更換 API KEY 以提高安全性
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📁 專案結構
 
-### Code Splitting
+```
+earthquake-tsunami-tracker/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── EarthquakeFetcher.jsx
+│   │   └── EarthquakeFetcher.css
+│   ├── App.js
+│   └── index.js
+├── .env.example
+├── .github/workflows/deploy.yml
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🛠️ 可用腳本
 
-### Analyzing the Bundle Size
+- `npm start` - 啟動開發伺服器
+- `npm test` - 執行測試
+- `npm run build` - 建置生產版本
+- `npm run deploy` - 部署到 GitHub Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📝 使用的 API
 
-### Making a Progressive Web App
+- [中央氣象局地震報告-顯著有感地震報告](https://opendata.cwa.gov.tw/dataset/earthquake/E-A0016-001)
+- [中央氣象局海嘯報告](https://opendata.cwa.gov.tw/dataset/tsunami/E-A0014-001)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🐛 問題回報
 
-### Advanced Configuration
+如果您發現任何問題，請在 [GitHub Issues](https://github.com/jeff-Morax/earthquake-tsunami-tracker/issues) 中回報。
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📄 授權
 
-### Deployment
+本專案採用 MIT 授權條款。
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*本專案使用中央氣象局開放資料，資料僅供參考，實際情況請以官方公告為準。*
