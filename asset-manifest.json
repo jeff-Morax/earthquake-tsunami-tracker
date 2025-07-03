@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/earthquake-tsunami-tracker/static/css/main.ffc3b10a.css",
+    "main.js": "/earthquake-tsunami-tracker/static/js/main.56a4d030.js",
+    "static/js/453.478363c3.chunk.js": "/earthquake-tsunami-tracker/static/js/453.478363c3.chunk.js",
+    "index.html": "/earthquake-tsunami-tracker/index.html",
+    "main.ffc3b10a.css.map": "/earthquake-tsunami-tracker/static/css/main.ffc3b10a.css.map",
+    "main.56a4d030.js.map": "/earthquake-tsunami-tracker/static/js/main.56a4d030.js.map",
+    "453.478363c3.chunk.js.map": "/earthquake-tsunami-tracker/static/js/453.478363c3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ffc3b10a.css",
+    "static/js/main.56a4d030.js"
+  ]
+}
